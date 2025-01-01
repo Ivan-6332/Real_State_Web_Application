@@ -15,6 +15,34 @@ const HouseContextProvider = ({ children }) => {
   const [price, setPrice] = useState('Price range (any)');
   const [loading, setLoading] = useState(false);
 
+  // return all countries
+  useEffect(() => {
+    const allCountries = houses.map((house) => {
+      return house.country;
+      
+    });
+
+    //remove duplicate countries
+    const uniqueCountries = ['Location (any)', ...new Set(allCountries)];
+
+    //set countries state
+    setCountries(uniqueCountries);
+  }, []);
+
+  // return all properties
+  useEffect(() => {
+    const allProperties = houses.map((house) => {
+      return house.type;
+      
+    });
+
+    //remove duplicate properties
+    const uniqueProperties = ['Location (any)', ...new Set(allProperties)];
+
+    //set properties state
+    setProperties(uniqueProperties);
+  }, []);
+
   // Ensure the context provider wraps the children properly
   return (
     <HouseContext.Provider
