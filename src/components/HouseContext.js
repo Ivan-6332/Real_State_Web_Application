@@ -43,6 +43,10 @@ const HouseContextProvider = ({ children }) => {
     setProperties(uniqueProperties);
   }, []);
 
+  const handleClick = () => {
+    console.log('clicked');
+  }
+
   // Ensure the context provider wraps the children properly
   return (
     <HouseContext.Provider
@@ -57,6 +61,7 @@ const HouseContextProvider = ({ children }) => {
         setPrice,
         houses,
         loading,
+        handleClick,
       }}
     >
       {children}
