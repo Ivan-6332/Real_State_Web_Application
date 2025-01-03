@@ -8,7 +8,7 @@ export const HouseContext = createContext();
 
 const HouseContextProvider = ({ children }) => {
   const [houses, setHouses] = useState(housesData);
-  const [favorites, setFavorites] = useState([]); // New state for favorites
+  const [favorites, setFavorites] = useState([]); // State for favorites
   const [country, setCountry] = useState('Location (any)');
   const [countries, setCountries] = useState([]);
   const [property, setProperty] = useState('Property type (any)');
@@ -19,29 +19,32 @@ const HouseContextProvider = ({ children }) => {
   // Add house to favorites
   const addToFavorites = (house) => {
     if (!favorites.some((fav) => fav.id === house.id)) {
-      setFavorites([...favorites, house]);
+      setFavorites((prevFavorites) => [...prevFavorites, house]);
     }
   };
 
   // Remove house from favorites
   const removeFromFavorites = (houseId) => {
-    setFavorites(favorites.filter((fav) => fav.id !== houseId));
+    setFavorites((prevFavorites) =>
+      prevFavorites.filter((fav) => fav.id !== houseId)
+    );
   };
 
-  // return all countries
+  // Return all countries
   useEffect(() => {
     const allCountries = houses.map((house) => house.country);
     const uniqueCountries = ['Location (any)', ...new Set(allCountries)];
     setCountries(uniqueCountries);
   }, [houses]);
 
-  // return all properties
+  // Return all properties
   useEffect(() => {
     const allProperties = houses.map((house) => house.type);
     const uniqueProperties = ['Location (any)', ...new Set(allProperties)];
     setProperties(uniqueProperties);
   }, [houses]);
 
+  // Handle filtering
   const handleClick = () => {
     setLoading(true);
     const isDefault = (str) => str.split(' ').includes('(any)');
@@ -88,10 +91,8 @@ const HouseContextProvider = ({ children }) => {
     });
 
     setTimeout(() => {
-      return newHouses.length < 1
-        ? setHouses([])
-        : setHouses(newHouses),
-        setLoading(false);
+      setHouses(newHouses.length < 1 ? [] : newHouses);
+      setLoading(false);
     }, 1000);
   };
 

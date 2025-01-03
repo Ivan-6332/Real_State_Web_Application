@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { BiBed, BiBath, BiArea } from 'react-icons/bi';
 import { HouseContext } from '../components/HouseContext';
+import { Link } from 'react-router-dom';
 
 const House = ({ house }) => {
   const { id, image, type, country, address, bedrooms, bathrooms, surface, price } = house;
@@ -17,34 +18,25 @@ const House = ({ house }) => {
       </div>
       <div className='text-lg font-semibold max-w-[260px]'>{address}</div>
       <div className='flex gap-x-4 my-4'>
-        <div className='flex items-center text-gray-600 gap-1'>
-          <div className='text-[20px]'>
-            <BiBed />
-          </div>
-          <div>{bedrooms}</div>
+        <div className='flex items-center gap-1'>
+          <BiBed /> {bedrooms}
         </div>
-        <div className='flex items-center text-gray-600 gap-1'>
-          <div className='text-[20px]'>
-            <BiBath />
-          </div>
-          <div>{bathrooms}</div>
+        <div className='flex items-center gap-1'>
+          <BiBath /> {bathrooms}
         </div>
-        <div className='flex items-center text-gray-600 gap-1'>
-          <div className='text-[20px]'>
-            <BiArea />
-          </div>
-          <div>{surface}</div>
+        <div className='flex items-center gap-1'>
+          <BiArea /> {surface} sqft
         </div>
       </div>
-      <div className='text-lg font-semibold text-violet-600 mb-4'>{price}</div>
-      <button
-        className={`mt-4 px-4 py-2 rounded ${
-          isFavorite ? 'bg-red-500 text-white' : 'bg-blue-500 text-white'
-        }`}
-        onClick={() => (isFavorite ? removeFromFavorites(id) : addToFavorites(house))}
-      >
-        {isFavorite ? 'Remove from Favorites' : 'Add to Favorites'}
-      </button>
+      <div className='text-lg font-semibold text-violet-600 mb-4'>${price}</div>
+      {isFavorite && (
+        <button
+          className={`px-4 py-2 rounded bg-red-500 text-white`}
+          onClick={() => removeFromFavorites(id)}
+        >
+          Remove from Favorites
+        </button>
+      )}
     </div>
   );
 };

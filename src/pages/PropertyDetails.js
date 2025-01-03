@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 
 //import data
 import { housesData } from '../data';
@@ -12,6 +12,9 @@ import { BiBed, BiBath, BiArea } from 'react-icons/bi';
 //import link
 import { Link } from 'react-router-dom';
 
+//import HouseContext
+import { HouseContext } from '../components/HouseContext';
+
 const PropertyDetails = () => {
   // get the house id
   const { id } = useParams();
@@ -20,6 +23,10 @@ const PropertyDetails = () => {
   const house = housesData.find(house => {
     return house.id === parseInt(id);
   });
+
+  //get favorites from HouseContext
+  const { favorites, addToFavorites, removeFromFavorites } = useContext(HouseContext);
+  const isFavorite = favorites.some((fav) => fav.id === house.id);
 
   return (
     <section>
@@ -34,6 +41,14 @@ const PropertyDetails = () => {
             <div className='bg-violet-500 text-white px-3 rounded-full'>{house.country}</div>
           </div>
           <div className='text-3xl font-semibold text-violet-600'>$ {house.price}</div>
+          <button
+            className={`px-4 py-2 rounded ${isFavorite ? 'bg-red-500 text-white' : 'bg-gray-300'}`}
+            onClick={() => {
+              isFavorite ? removeFromFavorites(house.id) : addToFavorites(house);
+            }}
+          >
+            {isFavorite ? 'Remove from Favorites' : 'Add to Favorites'}
+          </button>
         </div>
         <div className='flex flex-col item-start gap-8 lg:flex-row'>
           <div className='max-w-[768px]'>
