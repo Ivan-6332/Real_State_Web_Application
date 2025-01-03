@@ -15,8 +15,9 @@ const Login = () => {
   };
 
   return (
-    <div className="flex justify-center items-center h-screen bg-cover bg-center" style={{ backgroundImage: 'url(/path-to-your-image/login-background.jpg)' }}>
-      <div className="bg-white p-8 rounded shadow-md w-full max-w-sm">
+    <div className="flex justify-center items-center h-screen bg-cover bg-center" style={{ backgroundImage: 'url(/assets/img/login.jpg)' }}>
+      <div className="absolute inset-0 bg-black opacity-50"></div>
+      <div className="relative bg-white p-8 rounded shadow-md w-full max-w-sm">
         <h2 className="text-2xl font-bold mb-6">Login</h2>
         <form onSubmit={handleLogin}>
           <div className="mb-4">
