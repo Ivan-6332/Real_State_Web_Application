@@ -56,7 +56,7 @@ const PriceRangeDropdown = () => {
         
       </Menu.Button>
 
-      <Menu.Items className='dropdown-menu'>
+      <Menu.Items className='dropdown-menu absolute bottom-full mb-2 bg-gradient-to-b from-gray-100 to-gray-300'>
         {prices.map((price, index)=> {
           return (
             <Menu.Item onClick={()=> setPrice(price.value)} className='cursor-pointer hover:text-violet-700 transition'as= 'li' key={index}>{price.value}</Menu.Item>

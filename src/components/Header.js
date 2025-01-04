@@ -18,20 +18,20 @@ const Header = () => {
         <nav className="flex items-center gap-8">
           <Link
             to="/favorites"
-            className="text-gray-700 hover:text-violet-700 transition text-sm font-medium"
+            className="text-gray-700 hover:text-violet-700 transition text-lg font-medium px-4 py-3 rounded-lg hover:bg-violet-200"
           >
-            Favorites
+            <span className="mr-2">❤️</span> Favorites
           </Link>
           <div className="flex items-center gap-4">
             <Link
               to="/login"
-              className="text-gray-700 hover:text-violet-700 transition text-sm font-medium"
+              className="text-gray-700 hover:text-violet-700 transition text-lg font-medium px-4 py-3 rounded-lg"
             >
               Log in
             </Link>
             <Link
               to="/signup"
-              className="bg-violet-700 hover:bg-violet-800 text-white text-sm font-medium px-4 py-2 rounded-lg transition"
+              className="bg-violet-700 hover:bg-violet-800 text-white text-lg font-medium px-6 py-3 rounded-lg transition"
             >
               Sign up
             </Link>

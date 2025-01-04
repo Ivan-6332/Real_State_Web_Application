@@ -1,56 +1,66 @@
 import React, { useContext, useState } from 'react';
 
-//import data
+// Import data
 import { housesData } from '../data';
 
-//import use params
+// Import useParams for dynamic routing
 import { useParams } from 'react-router-dom';
 
-//import icons
+// Import icons
 import { BiBed, BiBath, BiArea } from 'react-icons/bi';
 
-//import link
+// Import Link for navigation
 import { Link } from 'react-router-dom';
 
-//import HouseContext
+// Import HouseContext for state management
 import { HouseContext } from '../components/HouseContext';
 
 const PropertyDetails = () => {
-  // get the house id
+  // Get the house ID from URL parameters
   const { id } = useParams();
 
-  //get the house based on the id
-  const house = housesData.find(house => {
-    return house.id === parseInt(id);
-  });
+  // Get the house based on the ID
+  const house = housesData.find((house) => house.id === parseInt(id));
 
-  //get favorites from HouseContext
+  // Get favorites and functions from HouseContext
   const { favorites, addToFavorites, removeFromFavorites } = useContext(HouseContext);
   const isFavorite = favorites.some((fav) => fav.id === house.id);
 
+  // State for toggling additional photos
   const [showMorePhotos, setShowMorePhotos] = useState(false);
 
-  const navigateToMorePhotos = (houseId) => {
+  // Toggle additional photos view
+  const navigateToMorePhotos = () => {
     setShowMorePhotos(!showMorePhotos);
   };
 
   return (
-    <section>
-      <div className="container mx-auto min-h-[800px] mb-14">
-        <div className='flex flex-col lg:flex-row lg:items-center lg:justify-between'>
+    <section className="bg-gradient-to-r from-blue-50 to-indigo-100">
+      <div className="container mx-auto min-h-[800px] mb-14 p-6 lg:p-10 shadow-lg rounded-lg bg-white">
+        <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-6">
           <div>
-            <h2 className='text-2xl font-semibold'>{house.name}</h2>
-            <h3 className='text-lg mb-4'>{house.address}</h3>
-            <div className='text-lg mb-4'>Year Built: {house.year}</div>
-            <div className='text-lg mb-4'>Contact: {house.agent.phone}</div>
+            <h2 className="text-3xl font-bold text-indigo-800">{house.name}</h2>
+            <h3 className="text-lg text-gray-600">{house.address}</h3>
+            <div className="text-gray-500 mt-2">Year Built: {house.year}</div>
+            <div className="text-gray-500">Contact: {house.agent.phone}</div>
           </div>
-          <div className='mb-4 lg:mb-0 flex gap-x-2 text-sm'>
-            <div className='bg-green-500 text-white px-3 rounded-full'>{house.type}</div>
-            <div className='bg-violet-500 text-white px-3 rounded-full'>{house.country}</div>
+          <div className="flex gap-2">
+            <div className="bg-green-500 text-white px-3 py-1 rounded-full text-sm">
+              {house.type}
+            </div>
+            <div className="bg-indigo-500 text-white px-3 py-1 rounded-full text-sm">
+              {house.country}
+            </div>
           </div>
-          <div className='text-3xl font-semibold text-violet-600'>$ {house.price}</div>
+          <div className="text-4xl font-semibold text-indigo-700">
+            $ {house.price}
+          </div>
           <button
-            className={`px-4 py-2 rounded ${isFavorite ? 'bg-red-500 text-white' : 'bg-gray-300'}`}
+            className={`px-4 py-2 rounded shadow transition ${
+              isFavorite
+                ? 'bg-red-500 text-white hover:bg-red-600'
+                : 'bg-gray-300 text-gray-700 hover:bg-gray-400'
+            }`}
             onClick={() => {
               isFavorite ? removeFromFavorites(house.id) : addToFavorites(house);
             }}
@@ -58,78 +68,99 @@ const PropertyDetails = () => {
             {isFavorite ? 'Remove from Favorites' : 'Add to Favorites'}
           </button>
         </div>
-        <div className='flex flex-col item-start gap-8 lg:flex-row'>
-          <div className='max-w-[768px]'>
-            <div className='mb-8'>
-              <img src={house.imageLg} alt='' />
-            </div>
+        <div className="flex flex-col gap-8 lg:flex-row">
+          <div className="max-w-[768px]">
+            <img
+              src={house.imageLg}
+              alt=""
+              className="mb-6 w-full rounded-lg shadow-md"
+            />
             <button
-              className='bg-blue-500 text-white px-4 py-2 rounded mb-8'
-              onClick={() => navigateToMorePhotos(house.id)}
+              className="bg-blue-500 text-white px-6 py-2 rounded shadow-md hover:bg-blue-600 transition"
+              onClick={navigateToMorePhotos}
             >
               View More Photos
             </button>
             {showMorePhotos && (
-              <div className='additional-photos'>
+              <div className="mt-6 grid grid-cols-2 gap-4">
                 {house.additionalImages.map((image, index) => (
-                  <img key={index} src={image} alt={`Additional ${index + 1}`} className='mb-4' />
+                  <img
+                    key={index}
+                    src={image}
+                    alt={`Additional ${index + 1}`}
+                    className="rounded-lg shadow-md"
+                  />
                 ))}
-                <img src={house.blueprint} alt='Blueprint' className='mb-4' />
+                <img
+                  src={house.blueprint}
+                  alt="Blueprint"
+                  className="rounded-lg shadow-md"
+                />
               </div>
             )}
-            <div className='flex gap-x-6 text-violet-700 mb-6'>
-              <div className='flex gap-x-2 items-center'>
-                <BiBed className='text-4xl' />
+            <div className="flex gap-x-6 text-indigo-700 mt-6">
+              <div className="flex gap-x-2 items-center">
+                <BiBed className="text-4xl" />
                 <div>{house.bedrooms}</div>
               </div>
-              <div className='flex gap-x-2 items-center'>
-                <BiBath className='text-4xl' />
+              <div className="flex gap-x-2 items-center">
+                <BiBath className="text-4xl" />
                 <div>{house.bathrooms}</div>
               </div>
-              <div className='flex gap-x-2 items-center'>
-                <BiArea className='text-4xl' />
+              <div className="flex gap-x-2 items-center">
+                <BiArea className="text-4xl" />
                 <div>{house.surface}</div>
               </div>
             </div>
-            <div>{house.description}</div>
+            <p className="text-gray-600 mt-6">{house.description}</p>
           </div>
-          <div className='flex-1 bg-white w-full mb-8 border border-gray-300 rounded-lg px-6 py-8'>
-            <div className='flex items-center gap-x-4 mb-8'>
-              <div className='w-20 h-20 p-1 border border-gray-300 rounded-full'>
-                <img src={house.agent.image} alt='' />
+          <div className="flex-1 bg-white border border-gray-200 rounded-lg p-6 shadow-md">
+            <div className="flex items-center gap-4 mb-8">
+              <div className="w-20 h-20 border border-gray-200 rounded-full overflow-hidden">
+                <img src={house.agent.image} alt="" />
               </div>
-              <div className='font-bold text-lg'>{house.agent.name}</div>
-              <Link to='' className='text-violet-700 text-sm'> View Listings</Link>
+              <div className="font-bold text-lg text-gray-700">
+                {house.agent.name}
+              </div>
+              <Link
+                to=""
+                className="text-indigo-600 text-sm hover:underline"
+              >
+                View Listings
+              </Link>
             </div>
             <form>
-              <input 
-                className='border border-gray-300 focus:border-violet-700 px-4 py-2 mb-4 w-full rounded' 
-                type="text" 
-                placeholder="Enter your name" 
+              <input
+                className="border border-gray-300 focus:ring focus:ring-indigo-200 px-4 py-2 mb-4 w-full rounded"
+                type="text"
+                placeholder="Enter your name"
               />
-              <input 
-                className='border border-gray-300 focus:border-violet-700 px-4 py-2 mb-4 w-full rounded' 
-                type="text" 
-                placeholder="Enter your email" 
+              <input
+                className="border border-gray-300 focus:ring focus:ring-indigo-200 px-4 py-2 mb-4 w-full rounded"
+                type="text"
+                placeholder="Enter your email"
               />
-              <input 
-                className='border border-gray-300 focus:border-violet-700 px-4 py-2 mb-4 w-full rounded' 
-                type="text" 
-                placeholder="Enter your phone number" 
+              <input
+                className="border border-gray-300 focus:ring focus:ring-indigo-200 px-4 py-2 mb-4 w-full rounded"
+                type="text"
+                placeholder="Enter your phone number"
               />
-              <textarea 
-                className='border border-gray-300 focus:border-violet-700 px-4 py-2 mb-4 w-full rounded' 
-                rows="4" 
-                placeholder="Enter your message"></textarea>
-              <div className='flex gap-x-4'>
-                <button 
-                  className='bg-violet-700 text-white px-4 py-2 rounded' 
-                  type="button">
-                  Send message
+              <textarea
+                className="border border-gray-300 focus:ring focus:ring-indigo-200 px-4 py-2 mb-4 w-full rounded"
+                rows="4"
+                placeholder="Enter your message"
+              ></textarea>
+              <div className="flex gap-4">
+                <button
+                  className="bg-indigo-600 text-white px-4 py-2 rounded shadow-md hover:bg-indigo-700 transition"
+                  type="button"
+                >
+                  Send Message
                 </button>
-                <button 
-                  className='bg-gray-300 text-black px-4 py-2 rounded' 
-                  type="button">
+                <button
+                  className="bg-gray-300 text-gray-700 px-4 py-2 rounded shadow-md hover:bg-gray-400 transition"
+                  type="button"
+                >
                   Call
                 </button>
               </div>

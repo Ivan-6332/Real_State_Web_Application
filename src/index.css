@@ -7,10 +7,16 @@
     @apply font-primary bg-gray-200;
   }
   .dropdown {
-    @apply w-full lg:max-w-[296px] cursor-pointer;
+    @apply w-full lg:max-w-[296px] cursor-pointer transition-all duration-200 ease-in-out;
   }
   .dropdown-btn {
     @apply flex h-[64px] items-center px-[18px] border rounded-lg;
+  }
+  .dropdown-btn:hover {
+    @apply bg-gray-100;
+  }
+  .dropdown-btn:focus {
+    @apply outline-none ring-2 ring-violet-500;
   }
   .dropdown-icon-primary {
     @apply text-2xl mr-[18px] text-violet-700;
@@ -19,6 +25,12 @@
     @apply text-2xl text-violet-700 ml-auto;
   }
   .dropdown-menu {
-    @apply px-6 py-8 text-[15px] space-y-6 shadow-md bg-white absolute w-full z-10 list-none rounded-b-lg;
+    @apply px-6 py-8 text-[15px] space-y-6 shadow-md bg-white absolute w-full z-50 list-none rounded-b-lg transition-all duration-200 ease-in-out;
+  }
+  .dropdown-menu:hover {
+    @apply bg-gray-50;
+  }
+  .dropdown-menu:focus {
+    @apply outline-none ring-2 ring-violet-500;
   }
 }
