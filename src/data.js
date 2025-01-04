@@ -1,16 +1,16 @@
 // import house images
 import House3 from './assets/img/houses/house3.jpg';
-import House4 from './assets/img/houses/house4.png';
-import House7 from './assets/img/houses/house7.png';
-import House8 from './assets/img/houses/house8.png';
-import House9 from './assets/img/houses/house9.png';
+import House4 from './assets/img/houses/house4.jpg';
+import House7 from './assets/img/houses/house7.jpg';
+import House8 from './assets/img/houses/house8.jpg';
+import House9 from './assets/img/houses/house9.jpg';
 import House12 from './assets/img/houses/house12.png';
 // import house large images
 import House3Lg from './assets/img/houses/house3lg.jpg';
-import House4Lg from './assets/img/houses/house4lg.png';
-import House7Lg from './assets/img/houses/house7lg.png';
-import House8Lg from './assets/img/houses/house8lg.png';
-import House9Lg from './assets/img/houses/house9lg.png';
+import House4Lg from './assets/img/houses/house4lg.jpg';
+import House7Lg from './assets/img/houses/house7lg.jpg';
+import House8Lg from './assets/img/houses/house8lg.jpg';
+import House9Lg from './assets/img/houses/house9lg.jpg';
 import House12Lg from './assets/img/houses/house12lg.png';
 
 // import apartments images
@@ -20,6 +20,7 @@ import Apartment3 from './assets/img/apartments/a3.png';
 import Apartment4 from './assets/img/apartments/a4.png';
 import Apartment5 from './assets/img/apartments/a5.png';
 import Apartment6 from './assets/img/apartments/a6.png';
+
 // import apartments large images
 import Apartment1Lg from './assets/img/apartments/a1lg.png';
 import Apartment2Lg from './assets/img/apartments/a2lg.png';
@@ -42,6 +43,33 @@ import Agent10 from './assets/img/agents/agent10.png';
 import Agent11 from './assets/img/agents/agent11.png';
 import Agent12 from './assets/img/agents/agent12.png';
 
+// import house details photos 
+import House3_1 from './assets/img/houses/House3_1.jpg';
+import House3_2 from './assets/img/houses/House3_2.jpg';
+import House3_3 from './assets/img/houses/House3_3.jpg';
+import House3_4 from './assets/img/houses/House3_4.jpg';
+import House3_5 from './assets/img/houses/House3_5.jpg';
+import House4_1 from './assets/img/houses/house4_1.jpg';
+import House4_2 from './assets/img/houses/house4_2.jpg';
+import House4_3 from './assets/img/houses/house4_3.jpg';
+import House4_4 from './assets/img/houses/house4_4.jpg';
+import House4_5 from './assets/img/houses/house4_5.jpg';
+import House7_1 from './assets/img/houses/house7_1.jpg';
+import House7_2 from './assets/img/houses/house7_2.jpg';
+import House7_3 from './assets/img/houses/house7_3.jpg';
+import House7_4 from './assets/img/houses/house7_4.jpg';
+import House7_5 from './assets/img/houses/house7_5.jpg';
+import House8_1 from './assets/img/houses/house8_1.jpg';
+import House8_2 from './assets/img/houses/house8_2.jpg';
+import House8_3 from './assets/img/houses/house8_3.jpg';
+import House8_4 from './assets/img/houses/house8_4.jpg';
+import House8_5 from './assets/img/houses/house8_5.jpg';
+import House9_1 from './assets/img/houses/house9_1.jpg';
+import House9_2 from './assets/img/houses/house9_2.jpg';
+import House9_3 from './assets/img/houses/house9_3.jpg';
+import House9_4 from './assets/img/houses/house9_4.jpg';
+import House9_5 from './assets/img/houses/house9_5.jpg';
+
 export const housesData = [
   {
     id: 3,
@@ -63,6 +91,8 @@ export const housesData = [
       name: 'Amado Smith',
       phone: '0123 456 78910',
     },
+    additionalImages: [House3_1, House3_2, House3_3, House3_4, House3_5],
+    blueprint: './assets/img/houses/house3-blueprint.png',
   },
   {
     id: 4,
@@ -84,6 +114,8 @@ export const housesData = [
       name: 'Kaitlyn Gonzalez',
       phone: '0123 456 78910',
     },
+    additionalImages: [House4_1, House4_2, House4_3, House4_4, House4_5],
+    blueprint: './assets/img/houses/house4-blueprint.png',
   },
   {
     id: 7,
@@ -105,6 +137,8 @@ export const housesData = [
       name: 'Vera Levesque',
       phone: '0123 456 78910',
     },
+    additionalImages: [House7_1, House7_2, House7_3, House7_4, House7_5],
+    blueprint: './assets/img/houses/house7-blueprint.png',
   },
   {
     id: 8,
@@ -126,6 +160,8 @@ export const housesData = [
       name: 'Sofia Gomes',
       phone: '0123 456 78910',
     },
+    additionalImages: [House8_1, House8_2, House8_3, House8_4, House8_5],
+    blueprint: './assets/img/houses/house8-blueprint.png',
   },
   {
     id: 9,
@@ -147,6 +183,8 @@ export const housesData = [
       name: 'Raymond Hood',
       phone: '0123 456 78910',
     },
+    additionalImages: [House9_1, House9_2, House9_3, House9_4, House9_5],
+    blueprint: './assets/img/houses/house9-blueprint.png',
   },
   {
     id: 12,
@@ -168,6 +206,8 @@ export const housesData = [
       name: 'Amado Smith',
       phone: '0123 456 78910',
     },
+    additionalImages: [House12, House3, House4, House7, House8],
+    blueprint: './assets/img/houses/house12-blueprint.png',
   },
   {
     id: 7,
@@ -189,6 +229,8 @@ export const housesData = [
       name: 'Jawhar Shamil Naser',
       phone: '0123 456 78910',
     },
+    additionalImages: [],
+    blueprint: '',
   },
   {
     id: 8,
@@ -210,6 +252,8 @@ export const housesData = [
       name: 'Juana Douglass',
       phone: '0123 456 78910',
     },
+    additionalImages: [],
+    blueprint: '',
   },
   {
     id: 9,
@@ -231,5 +275,7 @@ export const housesData = [
       name: 'Jerry Schenck',
       phone: '0123 456 78910',
     },
+    additionalImages: [],
+    blueprint: '',
   },
 ];
