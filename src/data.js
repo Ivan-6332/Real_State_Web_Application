@@ -4,30 +4,25 @@ import House4 from './assets/img/houses/house4.jpg';
 import House7 from './assets/img/houses/house7.jpg';
 import House8 from './assets/img/houses/house8.jpg';
 import House9 from './assets/img/houses/house9.jpg';
-import House12 from './assets/img/houses/house12.png';
+import House12 from './assets/img/houses/house12.jpg';
+
 // import house large images
 import House3Lg from './assets/img/houses/house3lg.jpg';
 import House4Lg from './assets/img/houses/house4lg.jpg';
 import House7Lg from './assets/img/houses/house7lg.jpg';
 import House8Lg from './assets/img/houses/house8lg.jpg';
 import House9Lg from './assets/img/houses/house9lg.jpg';
-import House12Lg from './assets/img/houses/house12lg.png';
+import House12Lg from './assets/img/houses/house12lg.jpg';
 
 // import apartments images
-import Apartment1 from './assets/img/apartments/a1.png';
-import Apartment2 from './assets/img/apartments/a2.png';
-import Apartment3 from './assets/img/apartments/a3.png';
-import Apartment4 from './assets/img/apartments/a4.png';
-import Apartment5 from './assets/img/apartments/a5.png';
-import Apartment6 from './assets/img/apartments/a6.png';
+import Apartment1 from './assets/img/apartments/a1.jpg';
+import Apartment2 from './assets/img/apartments/a2.jpg';
+import Apartment3 from './assets/img/apartments/a3.jpg';
 
 // import apartments large images
-import Apartment1Lg from './assets/img/apartments/a1lg.png';
-import Apartment2Lg from './assets/img/apartments/a2lg.png';
-import Apartment3Lg from './assets/img/apartments/a3lg.png';
-import Apartment4Lg from './assets/img/apartments/a4lg.png';
-import Apartment5Lg from './assets/img/apartments/a5lg.png';
-import Apartment6Lg from './assets/img/apartments/a6lg.png';
+import Apartment1Lg from './assets/img/apartments/a1lg.jpg';
+import Apartment2Lg from './assets/img/apartments/a2lg.jpg';
+import Apartment3Lg from './assets/img/apartments/a3lg.jpg';
 
 // import agents images
 import Agent1 from './assets/img/agents/agent1.png';
@@ -69,6 +64,26 @@ import House9_2 from './assets/img/houses/house9_2.jpg';
 import House9_3 from './assets/img/houses/house9_3.jpg';
 import House9_4 from './assets/img/houses/house9_4.jpg';
 import House9_5 from './assets/img/houses/house9_5.jpg';
+import House12_1 from './assets/img/houses/house12_1.jpg';
+import House12_2 from './assets/img/houses/house12_2.jpg';
+import House12_3 from './assets/img/houses/house12_3.jpg';
+import House12_4 from './assets/img/houses/house12_4.jpg';
+import House12_5 from './assets/img/houses/house12_5.jpg';
+import a1_1 from './assets/img/apartments/a1_1.jpg';
+import a1_2 from './assets/img/apartments/a1_2.jpg';
+import a1_3 from './assets/img/apartments/a1_3.jpg';
+import a1_4 from './assets/img/apartments/a1_4.jpg';
+import a1_5 from './assets/img/apartments/a1_5.jpg';
+import a2_1 from './assets/img/apartments/a2_1.jpg';
+import a2_2 from './assets/img/apartments/a2_2.jpg';
+import a2_3 from './assets/img/apartments/a2_3.jpg';
+import a2_4 from './assets/img/apartments/a2_4.jpg';
+import a2_5 from './assets/img/apartments/a2_5.jpg';
+import a3_1 from './assets/img/apartments/a3_1.jpg';
+import a3_2 from './assets/img/apartments/a3_2.jpg';
+import a3_3 from './assets/img/apartments/a3_3.jpg';
+import a3_4 from './assets/img/apartments/a3_4.jpg';
+import a3_5 from './assets/img/apartments/a3_5.jpg';
 
 export const housesData = [
   {
@@ -206,11 +221,11 @@ export const housesData = [
       name: 'Amado Smith',
       phone: '0123 456 78910',
     },
-    additionalImages: [House12, House3, House4, House7, House8],
+    additionalImages: [House12_1, House12_2, House12_3, House12_4, House12_5],
     blueprint: './assets/img/houses/house12-blueprint.png',
   },
   {
-    id: 7,
+    id: 17,
     type: 'Apartament',
     name: 'Apartament 1',
     description:
@@ -229,11 +244,11 @@ export const housesData = [
       name: 'Jawhar Shamil Naser',
       phone: '0123 456 78910',
     },
-    additionalImages: [],
+    additionalImages: [a1_1, a1_2, a1_3, a1_4, a1_5],
     blueprint: '',
   },
   {
-    id: 8,
+    id: 18,
     type: 'Apartament',
     name: 'Apartament 2',
     description:
@@ -252,11 +267,11 @@ export const housesData = [
       name: 'Juana Douglass',
       phone: '0123 456 78910',
     },
-    additionalImages: [],
+    additionalImages: [a2_1, a2_2, a2_3, a2_4, a2_5],
     blueprint: '',
   },
   {
-    id: 9,
+    id: 19,
     type: 'Apartament',
     name: 'Apartament 3',
     description:
@@ -275,7 +290,7 @@ export const housesData = [
       name: 'Jerry Schenck',
       phone: '0123 456 78910',
     },
-    additionalImages: [],
+    additionalImages: [a3_1, a3_2, a3_3, a3_4, a3_5],
     blueprint: '',
   },
 ];
