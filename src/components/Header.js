@@ -1,30 +1,43 @@
 import React from 'react';
-
-//import link
 import { Link } from 'react-router-dom';
-
-//import logo
 import Logo from '../assets/img/logo.svg';
 
 const Header = () => {
   return (
-    <header className='py-6 mb-12 border-b'>
+    <header className="py-6 mb-12 border-b bg-gray-100 shadow-md">
       <div className="container mx-auto flex justify-between items-center">
-        {/* logo */}
-        <Link to='/'>
-          <img src={Logo} alt="" />
+        {/* Logo */}
+        <Link to="/" className="flex items-center" aria-label="Home">
+          <img src={Logo} alt="App Logo" className="h-8 w-auto" />
+          <span className="ml-3 text-xl font-semibold text-violet-700">
+            HomeFinder
+          </span>
         </Link>
-        {/* buttons */}
-        <nav className='flex items-center justify-between'>
-          <div className='flex items-center gap-6'>
-            <Link className='hover:text-violet-900 transition' to='/login'>Log in</Link>
-            <Link className='bg-violet-700 hover:bg-violet-800 text-white px-4 py-3 rounded-lg transition' to='/signup'>Sign up</Link>
-          </div>
-          <Link to='/favorites' className='bg-violet-700 hover:bg-violet-800 text-white px-4 py-3 rounded-lg transition'>
-            View Favorites
+        
+        {/* Navigation */}
+        <nav className="flex items-center gap-8">
+          <Link
+            to="/favorites"
+            className="text-gray-700 hover:text-violet-700 transition text-sm font-medium"
+          >
+            Favorites
           </Link>
+          <div className="flex items-center gap-4">
+            <Link
+              to="/login"
+              className="text-gray-700 hover:text-violet-700 transition text-sm font-medium"
+            >
+              Log in
+            </Link>
+            <Link
+              to="/signup"
+              className="bg-violet-700 hover:bg-violet-800 text-white text-sm font-medium px-4 py-2 rounded-lg transition"
+            >
+              Sign up
+            </Link>
+          </div>
         </nav>
-      </div> 
+      </div>
     </header>
   );
 };
