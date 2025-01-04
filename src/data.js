@@ -34,9 +34,6 @@ import Agent6 from './assets/img/agents/agent6.png';
 import Agent7 from './assets/img/agents/agent7.png';
 import Agent8 from './assets/img/agents/agent8.png';
 import Agent9 from './assets/img/agents/agent9.png';
-import Agent10 from './assets/img/agents/agent10.png';
-import Agent11 from './assets/img/agents/agent11.png';
-import Agent12 from './assets/img/agents/agent12.png';
 
 // import house details photos 
 import House3_1 from './assets/img/houses/House3_1.jpg';
@@ -44,52 +41,62 @@ import House3_2 from './assets/img/houses/House3_2.jpg';
 import House3_3 from './assets/img/houses/House3_3.jpg';
 import House3_4 from './assets/img/houses/House3_4.jpg';
 import House3_5 from './assets/img/houses/House3_5.jpg';
+import House3_6 from './assets/img/houses/House3_6.jpg';
 import House4_1 from './assets/img/houses/house4_1.jpg';
 import House4_2 from './assets/img/houses/house4_2.jpg';
 import House4_3 from './assets/img/houses/house4_3.jpg';
 import House4_4 from './assets/img/houses/house4_4.jpg';
 import House4_5 from './assets/img/houses/house4_5.jpg';
+import House4_6 from './assets/img/houses/House4_6.jpg';
 import House7_1 from './assets/img/houses/house7_1.jpg';
 import House7_2 from './assets/img/houses/house7_2.jpg';
 import House7_3 from './assets/img/houses/house7_3.jpg';
 import House7_4 from './assets/img/houses/house7_4.jpg';
 import House7_5 from './assets/img/houses/house7_5.jpg';
+import House7_6 from './assets/img/houses/House7_6.jpg';
 import House8_1 from './assets/img/houses/house8_1.jpg';
 import House8_2 from './assets/img/houses/house8_2.jpg';
 import House8_3 from './assets/img/houses/house8_3.jpg';
 import House8_4 from './assets/img/houses/house8_4.jpg';
 import House8_5 from './assets/img/houses/house8_5.jpg';
+import House8_6 from './assets/img/houses/House8_6.jpg';
 import House9_1 from './assets/img/houses/house9_1.jpg';
 import House9_2 from './assets/img/houses/house9_2.jpg';
 import House9_3 from './assets/img/houses/house9_3.jpg';
 import House9_4 from './assets/img/houses/house9_4.jpg';
 import House9_5 from './assets/img/houses/house9_5.jpg';
+import House9_6 from './assets/img/houses/House9_6.jpg';
 import House12_1 from './assets/img/houses/house12_1.jpg';
 import House12_2 from './assets/img/houses/house12_2.jpg';
 import House12_3 from './assets/img/houses/house12_3.jpg';
 import House12_4 from './assets/img/houses/house12_4.jpg';
 import House12_5 from './assets/img/houses/house12_5.jpg';
+import House12_6 from './assets/img/houses/House12_6.jpg';
 import a1_1 from './assets/img/apartments/a1_1.jpg';
 import a1_2 from './assets/img/apartments/a1_2.jpg';
 import a1_3 from './assets/img/apartments/a1_3.jpg';
 import a1_4 from './assets/img/apartments/a1_4.jpg';
 import a1_5 from './assets/img/apartments/a1_5.jpg';
+import a1_6 from './assets/img/apartments/a1_6.webp';
 import a2_1 from './assets/img/apartments/a2_1.jpg';
 import a2_2 from './assets/img/apartments/a2_2.jpg';
 import a2_3 from './assets/img/apartments/a2_3.jpg';
 import a2_4 from './assets/img/apartments/a2_4.jpg';
 import a2_5 from './assets/img/apartments/a2_5.jpg';
+import a2_6 from './assets/img/apartments/a2_6.jpg';
 import a3_1 from './assets/img/apartments/a3_1.jpg';
 import a3_2 from './assets/img/apartments/a3_2.jpg';
 import a3_3 from './assets/img/apartments/a3_3.jpg';
 import a3_4 from './assets/img/apartments/a3_4.jpg';
 import a3_5 from './assets/img/apartments/a3_5.jpg';
+import a3_6 from './assets/img/apartments/a3_6.jpg';
+
 
 export const housesData = [
   {
-    id: 3,
+    id: 1,
     type: 'House',
-    name: 'House 3',
+    name: 'House 1',
     description:
       'Lorem ipsum dolor ',
     image: House3,
@@ -102,17 +109,17 @@ export const housesData = [
     year: '2016',
     price: '170000',
     agent: {
-      image: Agent3,
+      image: Agent1,
       name: 'Amado Smith',
       phone: '0123 456 78910',
     },
-    additionalImages: [House3_1, House3_2, House3_3, House3_4, House3_5],
-    blueprint: './assets/img/houses/house3-blueprint.png',
+    additionalImages: [House3_1, House3_2, House3_3, House3_4, House3_5, House3_6],
+    blueprint: "./assets/img/houses/House3_6.jpg",
   },
   {
-    id: 4,
+    id: 2,
     type: 'House',
-    name: 'House 4',
+    name: 'House 2',
     description:
       'Lorem ipsum dolor ',
     image: House4,
@@ -125,17 +132,17 @@ export const housesData = [
     year: '2016',
     price: '200000',
     agent: {
-      image: Agent4,
+      image: Agent2,
       name: 'Kaitlyn Gonzalez',
       phone: '0123 456 78910',
     },
-    additionalImages: [House4_1, House4_2, House4_3, House4_4, House4_5],
-    blueprint: './assets/img/houses/house4-blueprint.png',
+    additionalImages: [House4_1, House4_2, House4_3, House4_4, House4_5, House4_6],
+    blueprint: './assets/img/houses/House4_6.jpg',
   },
   {
-    id: 7,
+    id: 3,
     type: 'House',
-    name: 'House 7',
+    name: 'House 3',
     description:
       'Lorem ipsum dolor ',
     image: House7,
@@ -148,17 +155,17 @@ export const housesData = [
     year: '2015',
     price: '117000',
     agent: {
-      image: Agent10,
+      image: Agent3,
       name: 'Vera Levesque',
       phone: '0123 456 78910',
     },
-    additionalImages: [House7_1, House7_2, House7_3, House7_4, House7_5],
-    blueprint: './assets/img/houses/house7-blueprint.png',
+    additionalImages: [House7_1, House7_2, House7_3, House7_4, House7_5, House7_6],
+    blueprint: './assets/img/houses/House7_6.jpg',
   },
   {
-    id: 8,
+    id: 4,
     type: 'House',
-    name: 'House 8',
+    name: 'House 4',
     description:
       'Lorem ipsum dolor',
     image: House8,
@@ -171,17 +178,17 @@ export const housesData = [
     year: '2019',
     price: '145000',
     agent: {
-      image: Agent11,
+      image: Agent4,
       name: 'Sofia Gomes',
       phone: '0123 456 78910',
     },
-    additionalImages: [House8_1, House8_2, House8_3, House8_4, House8_5],
-    blueprint: './assets/img/houses/house8-blueprint.png',
+    additionalImages: [House8_1, House8_2, House8_3, House8_4, House8_5, House8_6],
+    blueprint: './assets/img/houses/House8_6.jpg',
   },
   {
-    id: 9,
+    id: 5,
     type: 'House',
-    name: 'House 9',
+    name: 'House 5',
     description:
       'Lorem ipsum dolor ',
     image: House9,
@@ -194,17 +201,17 @@ export const housesData = [
     year: '2015',
     price: '139000',
     agent: {
-      image: Agent12,
+      image: Agent5,
       name: 'Raymond Hood',
       phone: '0123 456 78910',
     },
-    additionalImages: [House9_1, House9_2, House9_3, House9_4, House9_5],
-    blueprint: './assets/img/houses/house9-blueprint.png',
+    additionalImages: [House9_1, House9_2, House9_3, House9_4, House9_5, House9_6],
+    blueprint: './assets/img/houses/House9_6.jpg',
   },
   {
-    id: 12,
+    id: 6,
     type: 'House',
-    name: 'House 12',
+    name: 'House 6',
     description:
       'Lorem ipsum dolor ',
     image: House12,
@@ -217,69 +224,69 @@ export const housesData = [
     year: '2013',
     price: '221000',
     agent: {
-      image: Agent3,
+      image: Agent6,
       name: 'Amado Smith',
       phone: '0123 456 78910',
     },
-    additionalImages: [House12_1, House12_2, House12_3, House12_4, House12_5],
-    blueprint: './assets/img/houses/house12-blueprint.png',
+    additionalImages: [House12_1, House12_2, House12_3, House12_4, House12_5, House12_6],
+    blueprint: './assets/img/houses/House12_6.jpg',
   },
   {
-    id: 17,
+    id: 7,
     type: 'Apartament',
     name: 'Apartament 1',
     description:
       'Lorem ipsum dolor ',
     image: Apartment1,
     imageLg: Apartment1Lg,
-    country: 'Canada',
-    address: '32 Pawnee Street Butte, MT 59701',
+    country: 'Country 1',
+    address: 'Address 1',
     bedrooms: '2',
     bathrooms: '1',
-    surface: '1200 sq ft',
-    year: '2012',
-    price: '20000',
-    agent: {
-      image: Agent7,
-      name: 'Jawhar Shamil Naser',
-      phone: '0123 456 78910',
-    },
-    additionalImages: [a1_1, a1_2, a1_3, a1_4, a1_5],
-    blueprint: '',
-  },
-  {
-    id: 18,
-    type: 'Apartament',
-    name: 'Apartament 2',
-    description:
-      'Lorem ipsum dolor',
-    image: Apartment2,
-    imageLg: Apartment2Lg,
-    country: 'United States',
-    address: '28 Westport Dr. Warminster, PA 18974',
-    bedrooms: '3',
-    bathrooms: '1',
-    surface: '1000 sq ft',
+    surface: '1100 sq ft',
     year: '2011',
     price: '30000',
     agent: {
-      image: Agent8,
-      name: 'Juana Douglass',
+      image: Agent7,
+      name: 'Agent 7',
       phone: '0123 456 78910',
     },
-    additionalImages: [a2_1, a2_2, a2_3, a2_4, a2_5],
-    blueprint: '',
+    additionalImages: [a1_1, a1_2, a1_3, a1_4, a1_5, a1_6],
+    blueprint: './assets/img/apartments/a1_6.webp',
   },
   {
-    id: 19,
+    id: 8,
+    type: 'Apartament',
+    name: 'Apartament 2',
+    description:
+      'Lorem ipsum dolor ',
+    image: Apartment2,
+    imageLg: Apartment2Lg,
+    country: 'Country 2',
+    address: 'Address 2',
+    bedrooms: '3',
+    bathrooms: '2',
+    surface: '1200 sq ft',
+    year: '2012',
+    price: '35000',
+    agent: {
+      image: Agent8,
+      name: 'Agent 8',
+      phone: '0123 456 78910',
+    },
+    additionalImages: [a2_1, a2_2, a2_3, a2_4, a2_5, a2_6],
+    blueprint: './assets/img/apartments/a2_6.jpg',
+  },
+  {
+    id: 9,
     type: 'Apartament',
     name: 'Apartament 3',
     description:
       'Lorem ipsum dolor ',
     image: Apartment3,
     imageLg: Apartment3Lg,
-    country: 'United States',
-    address: '84 Woodland St. Cocoa, FL 32927',
+    country: 'Country 3',
+    address: 'Address 3',
     bedrooms: '2',
     bathrooms: '1',
     surface: '1100 sq ft',
@@ -287,10 +294,10 @@ export const housesData = [
     price: '40000',
     agent: {
       image: Agent9,
-      name: 'Jerry Schenck',
+      name: 'Agent 9',
       phone: '0123 456 78910',
     },
-    additionalImages: [a3_1, a3_2, a3_3, a3_4, a3_5],
-    blueprint: '',
+    additionalImages: [a3_1, a3_2, a3_3, a3_4, a3_5, a3_6],
+    blueprint: './assets/img/apartments/a3_6.jpg',
   },
 ];

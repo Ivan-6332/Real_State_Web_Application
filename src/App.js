@@ -4,11 +4,11 @@ import { Routes, Route } from 'react-router-dom';
 // Import components
 import Header from './components/Header';
 import Footer from './components/Footer';
+import FavoritesList from './components/FavoritesList'; // Corrected path for FavoritesList
 
 // Import pages
 import Home from './pages/Home';
 import PropertyDetails from './pages/PropertyDetails';
-import FavoritesList from './components/FavoritesList'; // Corrected path for FavoritesList
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 
