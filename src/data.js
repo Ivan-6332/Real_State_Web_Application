@@ -98,7 +98,7 @@ export const housesData = [
     type: 'House',
     name: 'House 1',
     description:
-      'Spacious and elegant four-bedroom detached family home set on an impressive 5000 sq ft plot, located just 0.5 miles from Petts Wood station with convenient fast train services to London. This beautiful property is within easy walking distance of local shops, highly-rated schools, bus routes, and picturesque National Trust woodlandThe ground floor boasts three generously sized reception rooms, a modern 22 x 12 kitchen/breakfast room, and a bright and airy conservatory. The property further benefits from a practical utility room, a cloakroom, and ample storage options.On the first floor, there are four well-appointed bedrooms, including a luxurious master suite with an en-suite bathroom, alongside two additional family bathrooms to ensure comfort for the entire household.',
+      'This spacious and elegant four-bedroom detached family home is set on an impressive 5000 sq ft plot, located just 0.5 miles from Petts Wood station. With convenient fast train services to London, this beautiful property is within easy walking distance of local shops, highly-rated schools, bus routes, and picturesque National Trust woodland.\n\nThe ground floor boasts three generously sized reception rooms, a modern 22 x 12 kitchen/breakfast room, and a bright and airy conservatory. The property further benefits from a practical utility room, a cloakroom, and ample storage options.\n\nOn the first floor, there are four well-appointed bedrooms, including a luxurious master suite with an en-suite bathroom, alongside two additional family bathrooms to ensure comfort for the entire household.',
     image: House3,
     imageLg: House3Lg,
     country: 'United States',
@@ -121,7 +121,7 @@ export const housesData = [
     type: 'House',
     name: 'House 2',
     description:
-      'Lorem ipsum dolor ',
+      'Luxurious and expansive five-bedroom detached family home set on an impressive 5500 sq ft plot, located just 0.5 miles from Petts Wood station with fast train connections to London. This stunning property is conveniently situated within walking distance of local shops, top-rated schools, bus routes, and scenic National Trust woodlands.\n\nThe ground floor features three elegant reception rooms, a spacious modern kitchen/breakfast room, and a bright conservatory, perfect for family gatherings or entertaining guests. Additional conveniences include a utility room, a cloakroom, and ample storage spaces.\n\nThe first floor boasts five generously sized bedrooms, each with its own en-suite bathroom, offering ultimate privacy and comfort. The master suite is particularly impressive, with a walk-in wardrobe and luxurious en-suite.',
     image: House4,
     imageLg: House4Lg,
     country: 'Canada',
@@ -144,7 +144,7 @@ export const housesData = [
     type: 'House',
     name: 'House 3',
     description:
-      'Lorem ipsum dolor ',
+      'Charming and cozy two-bedroom detached home set on a generous 4000 sq ft plot, located just 0.5 miles from Petts Wood station with convenient fast train links to London. This delightful property is within easy walking distance of local shops, schools, bus routes, and serene National Trust woodland, offering a perfect blend of convenience and serenity.\n\nThe ground floor comprises two well-proportioned reception rooms, a modern  kitchen/breakfast room, and a bright and inviting conservatory, perfect for relaxing or entertaining. The property also benefits from a utility room for added practicality.\n\nThe first floor features two comfortable bedrooms and a well-appointed family bathroom, ensuring a cozy yet functional living space.',
     image: House7,
     imageLg: House7Lg,
     country: 'Canada',
@@ -167,7 +167,7 @@ export const housesData = [
     type: 'House',
     name: 'House 4',
     description:
-      'Lorem ipsum dolor',
+      'Attractive three-bedroom detached family home set on a 4000 sq ft plot, ideally located just 0.5 miles from Petts Wood station with fast train services to London. The property is within easy walking distance of local shops, well-regarded schools, bus routes, and picturesque National Trust woodland, making it a perfect choice for families.\n\nThe ground floor features two bright and spacious reception rooms, a modern fitted kitchen/breakfast room, and a lovely conservatory offering a versatile space for relaxation or entertaining. The property also benefits from a utility room for added convenience and a downstairs cloakroom.\n\nOn the first floor, there are three generously sized bedrooms, including a master bedroom with an en-suite bathroom, as well as a stylish family bathroom.',
     image: House8,
     imageLg: House8Lg,
     country: 'Canada',
@@ -190,7 +190,7 @@ export const housesData = [
     type: 'House',
     name: 'House 5',
     description:
-      'Lorem ipsum dolor ',
+      'Delightful two-bedroom detached home set on a generous 4600 sq ft plot, located just 0.5 miles from Petts Wood station with fast train services to London. This charming property is within easy reach of local shops, schools, bus routes, and tranquil National Trust woodland, offering an excellent combination of urban convenience and natural beauty.\n\nThe ground floor boasts two spacious reception rooms, a modern fitted kitchen/breakfast room, and a bright conservatory, ideal for relaxation or entertaining. The property further benefits from a utility room and a convenient downstairs cloakroom.\n\nThe first floor features two generously sized bedrooms, each with its own en-suite bathroom, ensuring comfort and privacy for residents.',
     image: House9,
     imageLg: House9Lg,
     country: 'United States',
@@ -213,7 +213,7 @@ export const housesData = [
     type: 'House',
     name: 'House 6',
     description:
-      'Lorem ipsum dolor ',
+      'Elegant and spacious four-bedroom detached family home set on an impressive 5200 sq ft plot, ideally located just 0.5 miles from Petts Wood station with fast train connections to London. This beautifully presented property is within easy walking distance of local shops, schools, bus routes, and scenic National Trust woodland, providing the perfect setting for family living.\n\nThe ground floor features two generously sized reception rooms, a modern fitted kitchen/breakfast room, and a bright and airy conservatory, perfect for entertaining or relaxing. The property also benefits from a utility room and a convenient downstairs cloakroom.\n\nUpstairs, the home offers four well-appointed bedrooms, each with its own en-suite bathroom, ensuring privacy and luxury for the entire household.',
     image: House12,
     imageLg: House12Lg,
     country: 'Canada',
@@ -236,7 +236,7 @@ export const housesData = [
     type: 'Apartament',
     name: 'Apartament 1',
     description:
-      'Lorem ipsum dolor ',
+      'Stylish and modern two-bedroom, two-bathroom apartment spanning 3000 sq ft, conveniently situated just 0.5 miles from Petts Wood station with fast train services to London. This well-located property is within easy walking distance of local shops, schools, bus routes, and the serene National Trust woodland, offering an excellent combination of urban convenience and natural beauty.\n\nThe apartment features a spacious open-plan living and dining area, complemented by a contemporary fitted kitchen with high-quality appliances, ideal for entertaining or casual family meals. The property also benefits from a separate utility area for added practicality.\n\nThe two generously sized bedrooms include a master suite with a sleek en-suite bathroom, while the second bedroom is served by a stylish family bathroom.',
     image: Apartment1,
     imageLg: Apartment1Lg,
     country: 'United States',
@@ -248,7 +248,7 @@ export const housesData = [
     price: '30000',
     agent: {
       image: Agent7,
-      name: 'Agent 7',
+      name: 'Ethan Gabriel Martinez',
       phone: '0123 456 78910',
     },
     additionalImages: [a1_1, a1_2, a1_3, a1_4, a1_5, a1_6],
@@ -259,7 +259,7 @@ export const housesData = [
     type: 'Apartament',
     name: 'Apartament 2',
     description:
-      'Lorem ipsum dolor ',
+      'Luxurious and expansive four-bedroom, four-bathroom apartment spanning an impressive 5600 sq ft, located just 0.5 miles from Petts Wood station with fast train connections to London. This premium property is within easy reach of local shops, schools, bus routes, and the tranquil National Trust woodland, providing an exceptional blend of city convenience and serene living.\n\nThe apartment features a bright and spacious open-plan living and dining area, seamlessly connected to a high-end fitted kitchen with integrated appliances, perfect for entertaining or family gatherings. Additional conveniences include a separate utility room and ample storage throughout.\n\nEach of the four well-proportioned bedrooms benefits from its own en-suite bathroom, offering unparalleled comfort and privacy. The master suite stands out with its generous size and luxurious finishes.',
     image: Apartment2,
     imageLg: Apartment2Lg,
     country: 'United States',
@@ -271,7 +271,7 @@ export const housesData = [
     price: '35000',
     agent: {
       image: Agent8,
-      name: 'Agent 8',
+      name: 'Olivia Charlotte Brown',
       phone: '0123 456 78910',
     },
     additionalImages: [a2_1, a2_2, a2_3, a2_4, a2_5, a2_6],
@@ -282,7 +282,7 @@ export const housesData = [
     type: 'Apartament',
     name: 'Apartament 3',
     description:
-      'Lorem ipsum dolor ',
+      'Spacious and elegant five-bedroom, three-bathroom apartment spanning 4800 sq ft, ideally located just 0.5 miles from Petts Wood station with fast train services to London. This beautifully designed property is within easy walking distance of local shops, schools, bus routes, and peaceful National Trust woodland, making it perfect for families or professionals seeking convenience and style.\n\nThe apartment boasts a generous open-plan living and dining area, ideal for both entertaining and everyday living. The modern fitted kitchen, complete with high-quality appliances, adds functionality and sophistication. A utility room provides additional convenience and storage.\n\nThe property features five well-sized bedrooms, including a master bedroom with an en-suite bathroom, while two additional bathrooms serve the remaining rooms. The layout ensures comfort and versatility for larger households.',
     image: Apartment3,
     imageLg: Apartment3Lg,
     country: 'United States',
@@ -294,7 +294,7 @@ export const housesData = [
     price: '40000',
     agent: {
       image: Agent9,
-      name: 'Agent 9',
+      name: 'Michael James Anderson',
       phone: '0123 456 78910',
     },
     additionalImages: [a3_1, a3_2, a3_3, a3_4, a3_5, a3_6],
