@@ -29,9 +29,19 @@ const PropertyDetails = () => {
   // State for toggling additional photos
   const [showMorePhotos, setShowMorePhotos] = useState(false);
 
+  // State for toggling map view
+  // This state variable is used to conditionally render the Google Map iframe
+  const [showMap, setShowMap] = useState(false);
+
   // Toggle additional photos view
   const navigateToMorePhotos = () => {
     setShowMorePhotos(!showMorePhotos);
+  };
+
+  // Toggle map view
+  // This function is used to toggle the showMap state variable
+  const toggleMapView = () => {
+    setShowMap(!showMap);
   };
 
   return (
@@ -81,6 +91,28 @@ const PropertyDetails = () => {
             >
               View More Photos
             </button>
+            {/* Button to toggle the map view */}
+            <button
+              className="bg-green-500 text-white px-6 py-2 rounded shadow-md hover:bg-green-600 transition ml-4"
+              onClick={toggleMapView}
+            >
+              View Location
+            </button>
+            {/* Conditional rendering of the Google Map iframe */}
+            {/* This iframe is rendered only when the showMap state variable is true */}
+            {showMap && (
+              <div className="mt-6 w-full h-64 rounded-lg shadow-md">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  frameBorder="0"
+                  style={{ border: 0 }}
+                  // Embed Google Maps with the provided API key and property address
+                  src={`https://www.google.com/maps/embed/v1/place?key=AIzaSyASqLY1bcJbiJz_3k-KMlVbUWzdAid4Nmk&q=${encodeURIComponent(house.address)}`}
+                  allowFullScreen
+                ></iframe>
+              </div>
+            )}
             {showMorePhotos && (
               <div className="mt-6 grid grid-cols-2 gap-4">
                 {house.additionalImages.map((image, index) => (
