@@ -115,7 +115,7 @@ const PropertyDetails = () => {
                     height="100%"
                     frameBorder="0"
                     style={{ border: 0 }}
-                    // Embed Google Maps with the provided API key and property address
+                    // API key
                     src={`https://www.google.com/maps/embed/v1/place?key=AIzaSyASqLY1bcJbiJz_3k-KMlVbUWzdAid4Nmk&q=${encodeURIComponent(house.address)}`}
                     allowFullScreen
                   ></iframe>
